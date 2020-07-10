@@ -1,26 +1,32 @@
 .favorites-aside {
-  border: 1px solid red;
-
-  grid-column: span 4;
-  @mixin tablet {
+  height: fit-content;
+  grid-column: span 5;
+  position: fixed;
+  width: 50px;
+  top: 135px;
+  @include tablet {
     grid-column: span 1;
-    grid-row: span 41;
+    grid-row: span 4;
   }
 }
 .favorites-title {
   color: blue;
 }
 .favorites-list {
+  border: 1px solid red;
   display: flex;
-  flex-direction: column;
 }
 .favorites-item {
-  height: 75px;
+  height: 150px;
+  width: 85px;
+  border: 1px solid blue;
 }
 .favorites-image {
-  height: 100%;
-  display: inline-block;
+  height: 100px;
+  margin: auto;
 }
 .favorites-name {
-  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
+.remove-favorites

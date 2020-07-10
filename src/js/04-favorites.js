@@ -1,9 +1,8 @@
 'use strict';
-
 function listenSeriesClicks() {
-  const seriesCard = document.querySelectorAll('.seriesCard');
-  seriesCard.forEach((card) => {
-    card.addEventListener('click', updateFavorites);
+  const addFavorites = document.querySelectorAll('.js-add-favorites');
+  addFavorites.forEach((addFav) => {
+    addFav.addEventListener('click', updateFavorites);
   });
 }
 
@@ -32,8 +31,16 @@ function displayFavorites() {
   let codeHTML = '';
   for (const item of favorites) {
     codeHTML += `<li class="favorites-item">`;
-    codeHTML += `<img src="${item.show.image.medium}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
+    if (item.show.image) {
+      codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
+      codeHTML += `<img src="${item.show.image.medium}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" /></a>`;
+    } else {
+      codeHTML += `<img src="${placeholderImg}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
+    }
     codeHTML += `<h5 class="favorites-name">${item.show.name}</h5>`;
+    codeHTML += `<span class="remove-favorites js-remove-favorites">`;
+    codeHTML += `<i class="fas fa-minus-square"></i>`;
+    codeHTML += `Remove</span>`;
     codeHTML += `</li >`;
   }
   const favoritesListDisplay = document.querySelector('.js-favorites-list');

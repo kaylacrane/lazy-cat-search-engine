@@ -13,6 +13,6 @@ function initiateServerRequest(ev) {
     .then((data) => {
       searchResults = data;
       console.log(searchResults);
-      displaySeries();
+      displayResults();
     });
 }
