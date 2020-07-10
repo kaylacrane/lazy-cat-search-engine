@@ -1,35 +1,59 @@
 .page__main {
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
-
 .main__title {
   padding: 10px;
+  grid-column: span 5;
 }
 
 .form {
+  z-index: 10;
   padding: 10px;
-  margin: auto;
+  grid-column: span 5;
+  position: fixed;
+  top: 100px;
+  background-color: white;
+  width: 100%;
+  height: 35px;
+}
+.searchResultsSection {
+  padding: 0 10px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  border-left: 1px solid grey;
+  grid-column: span 5;
+  @include tablet {
+    grid-column: span 4;
+  }
 }
 
 .seriesCard {
-  border: dashed red 1px;
+  border: blue solid 3px;
+  border-radius: 15px;
   display: inline-block;
   padding: 10px;
+  margin: 5px;
+  text-align: center;
 }
 
 .imgContainer {
   padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  width: 90vw;
+  max-width: 100%;
 }
 
 .seriesImage {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .seriesTitle {
   padding: 10px;
   text-align: center;
+}
+.add-favorites {
+  display: block;
+  background-color: blue;
+  width: 100%;
 }
