@@ -2,7 +2,7 @@
   height: fit-content;
   grid-column: span 5;
   position: fixed;
-  width: 50px;
+  width: 80px;
   top: 135px;
   @include tablet {
     grid-column: span 1;
@@ -17,9 +17,11 @@
   display: flex;
 }
 .favorites-item {
-  height: 150px;
+  margin: 5px auto;
+  height: fit-content;
   width: 85px;
   border: 1px solid blue;
+  text-align: center;
 }
 .favorites-image {
   height: 100px;
@@ -27,6 +29,10 @@
 }
 .favorites-name {
   width: 100%;
-  text-align: center;
 }
-.remove-favorites
+.remove-favorites {
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  background-color: blue;
+}

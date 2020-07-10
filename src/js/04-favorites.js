@@ -6,6 +6,13 @@ function listenSeriesClicks() {
   });
 }
 
+function listenFavoritesClicks() {
+  const removeFavorites = document.querySelectorAll('.js-remove-favorites');
+  removeFavorites.forEach((remove) => {
+    remove.addEventListener('click', updateFavorites);
+  });
+}
+
 /*searches within favorites array to see if clicked item already exists or not*/
 function updateFavorites(ev) {
   const clickedItemID = parseInt(ev.currentTarget.id);
@@ -38,11 +45,12 @@ function displayFavorites() {
       codeHTML += `<img src="${placeholderImg}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
     }
     codeHTML += `<h5 class="favorites-name">${item.show.name}</h5>`;
-    codeHTML += `<span class="remove-favorites js-remove-favorites">`;
+    codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}">`;
     codeHTML += `<i class="fas fa-minus-square"></i>`;
     codeHTML += `Remove</span>`;
     codeHTML += `</li >`;
   }
   const favoritesListDisplay = document.querySelector('.js-favorites-list');
   favoritesListDisplay.innerHTML = codeHTML;
+  listenFavoritesClicks();
 }
