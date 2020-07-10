@@ -6,10 +6,11 @@ function displaySeries() {
   for (let index = 0; index < searchResults.length; index++) {
     let seriesImg = searchResults[index].show.image;
     let seriesName = searchResults[index].show.name;
-    codeHTML += `<article class="seriesCard">`;
+    let seriesId = searchResults[index].show.id;
+    codeHTML += `<article class="seriesCard" id="${seriesId}">`;
     codeHTML += `<div class="imgContainer">`;
     if (seriesImg) {
-      codeHTML += `<img src="${seriesImg.original}" class="seriesImage js-seriesImage" alt="Cover image for ${seriesName}" /></div>`;
+      codeHTML += `<img src="${seriesImg.medium}" class="seriesImage js-seriesImage" alt="Cover image for ${seriesName}" /></div>`;
     } else {
       codeHTML += `<img src="${placeholderImg}" class="seriesImage js-seriesImage" alt="Cover image for ${seriesName}" /></div>`;
     }
@@ -22,5 +23,5 @@ function displaySeries() {
   );
   searchResultsSection.innerHTML =
     `<h2 class="s">Your search results:</h2>` + codeHTML;
-  //   listenProductsClicks();
+  listenSeriesClicks();
 }
