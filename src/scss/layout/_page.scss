@@ -1,59 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Baloo Da 2', cursive;
+}
 .page__main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  top: 150px;
+  height: fit-content;
 }
 .main__title {
-  padding: 10px;
-  grid-column: span 5;
+  text-align: center;
+  padding: 5px 0;
+}
+.search-form {
+  text-align: center;
+  padding: 5px 0;
+}
+.search-button {
+  width: 25px;
+  height: 25px;
+  background-color: lightseagreen;
+  border: none;
 }
 
-.form {
-  z-index: 10;
-  padding: 10px;
-  grid-column: span 5;
-  position: fixed;
-  top: 100px;
-  background-color: white;
-  width: 100%;
-  height: 35px;
-}
-.searchResultsSection {
-  padding: 0 10px;
-  position: relative;
-  top: 100px;
-  left: 100px;
-  border-left: 1px solid grey;
-  grid-column: span 5;
-  @include tablet {
-    grid-column: span 4;
-  }
-}
-
-.seriesCard {
-  border: blue solid 3px;
-  border-radius: 15px;
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
+.search-results-section {
   text-align: center;
 }
-
-.imgContainer {
-  padding: 10px;
-  max-width: 100%;
-}
-
-.seriesImage {
-  height: auto;
-  max-width: 100%;
-}
-
-.seriesTitle {
-  padding: 10px;
+.series-card {
   text-align: center;
+  border: 2px dashed lightpink;
+  width: 300px;
+  margin: 8px auto;
+  border-radius: 20px;
+  padding: 10px;
 }
 .add-favorites {
-  display: block;
-  background-color: blue;
-  width: 100%;
 }

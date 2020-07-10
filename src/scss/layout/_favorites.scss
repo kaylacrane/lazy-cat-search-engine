@@ -1,38 +1,34 @@
 .favorites-aside {
-  height: fit-content;
-  grid-column: span 5;
-  position: fixed;
-  width: 80px;
-  top: 135px;
   @include tablet {
-    grid-column: span 1;
-    grid-row: span 4;
   }
 }
 .favorites-title {
-  color: blue;
 }
 .favorites-list {
-  border: 1px solid red;
   display: flex;
+  height: 160px;
+  width: 100vw;
+  overflow-x: scroll;
+  background-color: lightpink;
 }
 .favorites-item {
-  margin: 5px auto;
-  height: fit-content;
-  width: 85px;
-  border: 1px solid blue;
   text-align: center;
+  height: 150px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  background-color: white;
 }
 .favorites-image {
   height: 100px;
-  margin: auto;
+  width: auto;
 }
 .favorites-name {
-  width: 100%;
+  font-size: 12px;
 }
 .remove-favorites {
-  display: block;
   font-size: 12px;
   width: 100%;
-  background-color: blue;
+  background-color: lightgreen;
 }

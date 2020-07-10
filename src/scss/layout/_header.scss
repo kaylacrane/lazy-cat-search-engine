@@ -1,8 +1,30 @@
 .page__header {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightpink;
   position: fixed;
-  background-color: white;
-  height: 100px;
   width: 100%;
   z-index: 10;
+}
+.header__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header__logo {
+  padding: 5px;
+  width: 60px;
+  height: 70px;
+  display: inline-block;
+}
+.header__title {
+  display: inline-block;
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 30px;
+  margin-top: 0;
+}
+.header__slogan {
+  font-style: italic;
+  display: block;
 }
