@@ -1,0 +1,26 @@
+.favorites-aside {
+  border: 1px solid red;
+
+  grid-column: span 4;
+  @mixin tablet {
+    grid-column: span 1;
+    grid-row: span 41;
+  }
+}
+.favorites-title {
+  color: blue;
+}
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+}
+.favorites-item {
+  height: 75px;
+}
+.favorites-image {
+  height: 100%;
+  display: inline-block;
+}
+.favorites-name {
+  display: inline-block;
+}

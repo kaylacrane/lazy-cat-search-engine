@@ -1,14 +1,22 @@
 .page__main {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-
 .main__title {
   padding: 10px;
+  grid-column: span 4;
 }
 
 .form {
   padding: 10px;
-  margin: auto;
+  grid-column: span 4;
+}
+.searchResultsSection {
+  grid-column: span 4;
+  @mixin tablet {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
 }
 
 .seriesCard {
@@ -21,12 +29,12 @@
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  width: 90vw;
+  max-width: 100%;
 }
 
 .seriesImage {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .seriesTitle {

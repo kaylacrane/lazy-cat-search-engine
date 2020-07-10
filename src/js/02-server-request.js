@@ -12,7 +12,7 @@ function initiateServerRequest(ev) {
     .then((response) => response.json())
     .then((data) => {
       searchResults = data;
-      console.log(data);
+      console.log(searchResults);
       displaySeries();
     });
 }
