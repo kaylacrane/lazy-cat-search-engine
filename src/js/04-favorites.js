@@ -31,6 +31,7 @@ function updateFavorites(ev) {
   }
   console.log('favorites list:', favorites);
   displayFavorites();
+  updateLocalStorage();
 }
 
 function displayFavorites() {
