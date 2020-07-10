@@ -11,7 +11,7 @@ function displayResults() {
     if (series.image) {
       codeHTML += `<img src="${series.image.medium}" class="seriesImage js-seriesImage" alt="Cover image for ${series.name}" /></a></div>`;
     } else {
-      codeHTML += `<img src="${placeholderImg}" class="seriesImage js-seriesImage" alt="Cover image for ${series.name}" /></a></div>`;
+      codeHTML += `<img src="https://dummyimage.com/210x295/000/fff&text=${series.name}" class="seriesImage js-seriesImage" alt="Cover image for ${series.name}" /></a></div>`;
     }
     codeHTML += `<h3 class="seriesTitle js-seriesTitle">${series.name}</h3>`;
     codeHTML += `<span class="add-favorites js-add-favorites" id="${series.id}">`;

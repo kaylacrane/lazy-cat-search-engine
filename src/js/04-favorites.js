@@ -42,7 +42,7 @@ function displayFavorites() {
       codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
       codeHTML += `<img src="${item.show.image.medium}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" /></a>`;
     } else {
-      codeHTML += `<img src="${placeholderImg}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
+      codeHTML += `<img src="https://dummyimage.com/210x295/000/fff&text=${item.show.name}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
     }
     codeHTML += `<h5 class="favorites-name">${item.show.name}</h5>`;
     codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}">`;
