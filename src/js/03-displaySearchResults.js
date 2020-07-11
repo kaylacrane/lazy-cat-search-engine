@@ -31,12 +31,11 @@ function displayResults() {
 function showSearchResultFavorites() {
   const seriesCards = document.querySelectorAll('.js-series-card');
   seriesCards.forEach((card) => {
-    for (const fav of favorites) {
-      if (parseInt(card.id) === fav.show.id) {
-        card.classList.add('js-card-favorite');
-      } else {
-        card.classList.remove('js-card-favorite');
-      }
+    const found = favorites.find((fav) => fav.show.id === parseInt(card.id));
+    if (found) {
+      card.classList.add('js-card-favorite');
+    } else {
+      card.classList.remove('js-card-favorite');
     }
   });
 }
