@@ -1,18 +1,21 @@
 <main class="page__main">
-  <h2 class="main__title">TV Series Search Engine</h2>
-
-  <form action="" class="form">
-    <label for="search">Search for your favorite series</label>
-    <input type="text" id="search" class="searchBox js-searchBox" />
+  <h3 class="main__title">Search for your favorite TV series</h3>
+  <form action="" class="search-form">
+    <label for="search"></label>
     <input
-      type="submit"
-      value="Let's go"
-      class="searchButton js-searchButton"
+      type="text"
+      id="search"
+      class="searchBox js-searchBox"
+      placeholder="Garfield"
     />
+    <input type="submit" value="Search" class="search-button js-searchButton" />
   </form>
   <aside class="favorites-aside">
-    <h3 class="favorites-title">Favorites List</h3>
-    <ul class="js-favorites-list"></ul>
+    <h3 class="favorites-title js-favorites-title">
+      <i class="fas fa-paw js-favorites-title-icon"></i> My Purrfect List
+      <i class="fas fa-paw js-favorites-title-icon"></i>
+    </h3>
+    <div class="favorites-list js-favorites-list"></div>
   </aside>
-  <div class="js-searchResultsSection searchResultsSection"></div>
+  <div class="js-search-results-section search-results-section"></div>
 </main>
