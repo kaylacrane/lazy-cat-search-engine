@@ -1,4 +1,8 @@
 'use strict';
+
+// EVENT LISTENERS
+favsTitle.addEventListener('click', openCloseFavs);
+
 function listenSeriesClicks() {
   const addFavorites = document.querySelectorAll('.js-add-favorites');
   addFavorites.forEach((addFav) => {
@@ -13,25 +17,33 @@ function listenFavoritesClicks() {
   });
 }
 
-/*searches within favorites array to see if clicked item already exists or not*/
+// EVENT HANDLERS & FUNCTIONS
+/*Opens/closes favs list upon clicking favs title*/
+function openCloseFavs() {
+  favoritesListDisplay.classList.toggle('js-open-favs');
+  favsTitleIcons.forEach((icon) => icon.classList.toggle('fa-flip-vertical'));
+}
 function updateFavorites(ev) {
+  /*searches within favorites array to see if clicked item already exists or not*/
   const clickedItemID = parseInt(ev.currentTarget.id);
   const clickedSeries = searchResults.find(
     (series) => series.show.id === clickedItemID
   );
-  /*if favItemIndex has a value, then the clicked item is already in the favs list*/
+
+  /*finds clicked series inside favs list, if possible*/
   const favItemIndex = favorites.findIndex(
     (fav) => fav.show.id === clickedItemID
   );
 
+  /*if favItemIndex has a value, then the clicked item is already in the favs list*/
   if (favItemIndex >= 0) {
     favorites.splice(favItemIndex, 1);
   } else if (favItemIndex === -1) {
     favorites.push(clickedSeries);
   }
-  console.log('favorites list:', favorites);
   displayFavorites();
   updateLocalStorage();
+  showSearchResultFavorites();
 }
 
 function displayFavorites() {
@@ -39,8 +51,8 @@ function displayFavorites() {
   let codeHTML = '';
   for (const item of favorites) {
     codeHTML += `<div class="favorites-item">`;
-    codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}">`;
-    codeHTML += `<i class="fas fa-minus-square"></i>`;
+    codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}" title="Remove from favorites list">`;
+    codeHTML += `<i class="fas fa-window-close remove-icon"></i>`;
     codeHTML += `Remove</span>`;
     if (item.show.image) {
       codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
@@ -48,11 +60,40 @@ function displayFavorites() {
     } else {
       codeHTML += `<img src="https://dummyimage.com/210x295/000/fff&text=${item.show.name}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
     }
-    codeHTML += `<h5 class="favorites-name">${item.show.name}</h5>`;
-
     codeHTML += `</div >`;
   }
-  const favoritesListDisplay = document.querySelector('.js-favorites-list');
   favoritesListDisplay.innerHTML = codeHTML;
   listenFavoritesClicks();
 }
+
+function updateFavsInSearchResults() {}
+/*locates card associated with clicked item*/
+/*const seriesCards = document.querySelectorAll('.js-series-card');
+let clickedCard;
+seriesCards.forEach((card) => {
+  if (parseInt(card.id) === clickedItemID) {
+    clickedCard = card;
+  }
+});
+favorites.forEach((fav) => {
+  console.log(clickedCard.id, fav.show.id);
+  if (fav.show.id === parseInt(clickedCard.id)) {
+    clickedCard.classList.remove('js-card-favorite');
+  } else {
+   clickedCard.classList.add('js-card-favorite');
+  }
+});
+ let clickedCard;
+  seriesCards.forEach((card) => {
+    if (parseInt(card.id) === clickedItemID) {
+      clickedCard = card;
+    }
+  });
+if (favItemIndex >= 0) {
+    favorites.splice(favItemIndex, 1);
+    clickedCard.classList.remove('js-card-favorite');
+  } else if (favItemIndex === -1) {
+    favorites.push(clickedSeries);
+    clickedCard.classList.add('js-card-favorite');
+  }
+*/

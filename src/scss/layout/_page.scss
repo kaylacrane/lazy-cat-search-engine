@@ -5,24 +5,26 @@
   text-decoration: none;
   font-family: 'Baloo Da 2', cursive;
 }
+html {
+  height: 100vh;
+}
 .page__main {
   position: relative;
-  top: 150px;
+  top: 130px;
   height: fit-content;
 }
 .main__title {
   text-align: center;
-  padding: 5px 0;
 }
 .search-form {
   text-align: center;
   padding: 5px 0;
 }
 .search-button {
-  width: 25px;
-  height: 25px;
   background-color: lightseagreen;
   border: none;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
 .search-results-section {
@@ -36,5 +38,12 @@
   border-radius: 20px;
   padding: 10px;
 }
+.series-title {
+}
 .add-favorites {
+  cursor: pointer;
+}
+.js-card-favorite {
+  background-color: rgb(146, 219, 216);
+  border: 2px dashed rgb(34, 160, 158);
 }
