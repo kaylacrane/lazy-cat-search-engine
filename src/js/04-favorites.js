@@ -21,7 +21,6 @@ function listenFavoritesClicks() {
 /*Opens/closes favs list upon clicking favs title*/
 function openCloseFavs() {
   favoritesListDisplay.classList.toggle('js-open-favs');
-  favsTitleIcons.forEach((icon) => icon.classList.toggle('fa-flip-vertical'));
 }
 function updateFavorites(ev) {
   /*searches within favorites array to see if clicked item already exists or not*/
@@ -54,13 +53,13 @@ function displayFavorites() {
     codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}" title="Remove from favorites list">`;
     codeHTML += `<i class="fas fa-window-close remove-icon"></i>`;
     codeHTML += `Remove</span>`;
+    codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
     if (item.show.image) {
-      codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
-      codeHTML += `<img src="${item.show.image.medium}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" /></a>`;
+      codeHTML += `<img src="${item.show.image.medium}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
     } else {
-      codeHTML += `<img src="https://dummyimage.com/210x295/000/fff&text=${item.show.name}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
+      codeHTML += `<img src="${placeholderImgFavs}${item.show.name}" class="js-favoritesImage favorites-image" alt="Cover image for ${item.show.name}" />`;
     }
-    codeHTML += `</div >`;
+    codeHTML += `</a></div >`;
   }
   favoritesListDisplay.innerHTML = codeHTML;
   listenFavoritesClicks();

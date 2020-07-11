@@ -12,7 +12,6 @@ function initiateServerRequest(ev) {
     .then((response) => response.json())
     .then((data) => {
       searchResults = data;
-      console.log(searchResults);
       displayResults();
     });
 }
