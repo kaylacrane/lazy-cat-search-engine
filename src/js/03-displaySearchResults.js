@@ -11,18 +11,17 @@ function displayResults() {
     codeHTML += `<span class="add-favorites js-add-favorites" id="${seriesId}">`;
     codeHTML += `<i class="fas fa-plus-square"></i>`;
     codeHTML += ` Add to Favorites</span>`;
-    codeHTML += `<div class="imgContainer">`;
+    codeHTML += `<div class="img-container">`;
     codeHTML += `<a href="${seriesURL}" title="Visit ${seriesName} on TVmaze">`;
     if (seriesImg) {
-      codeHTML += `<img src="${seriesImg.medium}" class="seriesImage js-seriesImage" alt="Cover image for ${seriesName}" /></a></div>`;
+      codeHTML += `<img src="${seriesImg.medium}" class="series-image js-series-image" alt="Cover image for ${seriesName}" /></a></div>`;
     } else {
-      codeHTML += `<img src="${placeholderImg}${seriesName}" class="seriesImage js-seriesImage" alt="Cover image for ${seriesName}" /></a></div>`;
+      codeHTML += `<img src="${placeholderImg}${seriesName}" class="series-image js-series-image" alt="Cover image for ${seriesName}" /></a></div>`;
     }
     codeHTML += `<h3 class="series-title js-seriesTitle">${seriesName}</h3>`;
     codeHTML += `</article>`;
   }
-  searchResultsSection.innerHTML =
-    `<h2 class="s">Your search results:</h2>` + codeHTML;
+  searchResultsSection.innerHTML = codeHTML;
   showSearchResultFavorites();
   listenSeriesClicks();
 }
