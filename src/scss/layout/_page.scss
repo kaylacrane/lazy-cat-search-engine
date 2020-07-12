@@ -11,21 +11,36 @@ html {
   margin-top: 130px;
   height: 100%;
   font-family: $font-main;
+  @include desktop {
+    margin-top: 150px;
+  }
 }
 .main__title {
   text-align: center;
   font-size: 20px;
+  @include desktop {
+    font-size: 22px;
+  }
 }
 .search-form {
   text-align: center;
   padding: 5px 0 10px;
   background-color: $color-white;
+  @include desktop {
+    margin: 20px auto;
+  }
 }
 .search-button {
   background-color: $color-accents;
   border: none;
   padding: 2px 5px;
   border-radius: 5px;
+  transition: all 0.6s;
+  margin-left: 5px;
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.1);
+  }
 }
 .search-results-section {
   display: flex;
@@ -38,6 +53,10 @@ html {
     flex-wrap: wrap;
     justify-content: space-evenly;
     overflow-x: hidden;
+  }
+  @include desktop {
+    max-width: 1200px;
+    margin: auto;
   }
 }
 .js-no-results-img {
@@ -59,7 +78,7 @@ html {
   width: 180px;
   margin: 10px 5px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 0 10px;
   transition: all 0.8s;
   box-shadow: 0 0 12px $color-grey;
   cursor: pointer;
@@ -73,6 +92,9 @@ html {
   }
 }
 .series-card-favs {
+  display: inline-block;
+  padding: 6px 0;
+  width: 100%;
   color: $color-accents;
   filter: brightness(80%);
 }
@@ -93,7 +115,7 @@ html {
   height: 100%;
 }
 .series-title {
-  padding-top: 10px;
+  padding-top: 6px;
   text-align: center;
   font-size: 16px;
 }

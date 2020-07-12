@@ -1,33 +1,68 @@
 .page__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: lightpink;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
 }
+.header__wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  @include desktop {
+    text-align: left;
+    flex-direction: row;
+    margin: auto;
+  }
+}
 .header__text-container {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  @include desktop {
+    padding: 20px 35px;
+  }
 }
 .header__logo {
   padding: 5px;
   width: 60px;
   height: 70px;
   display: inline-block;
+  animation-name: scaleIn;
+  animation-duration: 2s;
+  @include desktop {
+    position: relative;
+    top: -20px;
+    transform: scale(2.2);
+  }
 }
 .header__title {
   display: inline-block;
   font-family: $font-main;
   font-size: 30px;
   margin: 0;
+  @include desktop {
+    font-size: 40px;
+  }
 }
 .header__slogan {
   font-style: italic;
   display: block;
   font-family: $font-secondary;
   padding-bottom: 5px;
+  @include desktop {
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: rotate(80deg) translateX(-200px);
+  }
+  to {
+    transform: rotate(0) translateX(0);
+  }
 }
