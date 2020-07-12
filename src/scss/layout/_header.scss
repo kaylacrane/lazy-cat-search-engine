@@ -21,11 +21,13 @@
 }
 .header__title {
   display: inline-block;
-  font-family: 'Baloo Da 2', cursive;
+  font-family: $font-main;
   font-size: 30px;
   margin: 0;
 }
 .header__slogan {
   font-style: italic;
   display: block;
+  font-family: $font-secondary;
+  padding-bottom: 5px;
 }

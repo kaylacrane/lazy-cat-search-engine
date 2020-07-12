@@ -1,7 +1,9 @@
 'use strict';
+// SEARCH EVENT LISTENERS
 searchBox.addEventListener('keyup', getSearchData);
 searchButton.addEventListener('click', initiateServerRequest);
 
+// FUNCTIONS FOR SERVER REQUEST
 function getSearchData() {
   searchValue = searchBox.value;
 }

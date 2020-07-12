@@ -1,8 +1,7 @@
 'use strict';
-
+const seriesTitle = document.querySelector('.js-seriesTitle');
 const searchBox = document.querySelector('.js-searchBox');
 const searchButton = document.querySelector('.js-searchButton');
-const seriesTitle = document.querySelector('.js-seriesTitle');
 const searchResultsSection = document.querySelector(
   '.js-search-results-section'
 );

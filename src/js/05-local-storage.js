@@ -1,8 +1,9 @@
 'use strict';
+
 loadLocalStorage();
 
 function updateLocalStorage() {
-  /*deletes local storage key if favs list is empty*/
+  /*deletes local storage key if favs list is empty, otherwise updates key with each new item*/
   if (favorites.length === 0) {
     localStorage.removeItem('favorites');
   } else {
