@@ -33,6 +33,7 @@
   width: 100vw;
   overflow-x: scroll;
   background-color: $color-primary;
+
   @include desktop {
     margin: auto;
     max-width: 1200px;

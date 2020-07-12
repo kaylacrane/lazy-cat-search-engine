@@ -3,22 +3,19 @@ function displayResults() {
   displayImgNoResults();
   let codeHTML = '';
   for (let index = 0; index < searchResults.length; index++) {
-    const seriesId = searchResults[index].show.id;
-    const seriesName = searchResults[index].show.name;
-    const seriesImg = searchResults[index].show.image;
-    const seriesURL = searchResults[index].show.url;
-    codeHTML += `<article class="series-card js-series-card" id="${seriesId}">`;
-    codeHTML += `<span class="series-card-favs js-series-card-favs" id="${seriesId}">`;
+    const { id, name, image, url } = searchResults[index].show;
+    codeHTML += `<article class="series-card js-series-card" id="${id}">`;
+    codeHTML += `<span class="series-card-favs js-series-card-favs" id="${id}">`;
     codeHTML += `<i class="fas fa-plus-square"></i>`;
     codeHTML += ` Add to Favs</span>`;
     codeHTML += `<div class="img-container">`;
-    codeHTML += `<a href="${seriesURL}" title='Visit ${seriesName} on TVmaze' target="_blank">`;
-    if (seriesImg) {
-      codeHTML += `<img src="${seriesImg.medium}" class="series-image js-series-image" alt="Cover image for ${seriesName}" /></a></div>`;
+    codeHTML += `<a href="${url}" title='Visit ${name} on TVmaze' target="_blank">`;
+    if (image) {
+      codeHTML += `<img src="${image.medium}" class="series-image js-series-image" alt="Cover image for ${name}" /></a></div>`;
     } else {
-      codeHTML += `<img src="${placeholderImg}${seriesName}" class="series-image js-series-image" alt="Cover image for ${seriesName}" /></a></div>`;
+      codeHTML += `<img src="${placeholderImg}${name}" class="series-image js-series-image" alt="Cover image for ${name}" /></a></div>`;
     }
-    codeHTML += `<h3 class="series-title js-seriesTitle">${seriesName}</h3>`;
+    codeHTML += `<h3 class="series-title js-seriesTitle">${name}</h3>`;
     codeHTML += `</article>`;
   }
   searchResultsSection.innerHTML = codeHTML;
