@@ -46,9 +46,10 @@ function changeFavButtonSearchResults() {
   addFavorites.forEach((addFav) => {
     let found = favorites.find((fav) => fav.show.id === parseInt(addFav.id));
     if (found) {
-      console.log(addFav);
+      addFav.classList.add('js-series-favs-remove');
       addFav.innerHTML = `<i class="fas fa-minus-square" aria-hidden="true"></i> Remove from Favs`;
     } else {
+      addFav.classList.remove('js-series-favs-remove');
       addFav.innerHTML = `<i class="fas fa-plus-square"></i> Add to Favs`;
     }
   });

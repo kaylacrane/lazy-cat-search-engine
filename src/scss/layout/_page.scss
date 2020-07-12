@@ -60,6 +60,13 @@ html {
     transform: scale(0.95);
   }
 }
+.series-card-favs {
+  color: $color-accents;
+  filter: brightness(80%);
+}
+.js-series-favs-remove {
+  color: $color-black;
+}
 .series-image {
   width: 100%;
   height: 100%;
