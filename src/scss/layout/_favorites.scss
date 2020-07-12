@@ -3,14 +3,6 @@
   @include tablet {
   }
 }
-.favorites-title {
-  background-color: $color-primary;
-  width: fill;
-  height: 100%;
-  padding: 5px 15px;
-  width: fit-content;
-  border-top-left-radius: 25px;
-}
 .favorites-title-bar {
   display: flex;
   justify-content: center;
@@ -18,22 +10,29 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
+.favorites-title {
+  background-color: $color-light-1;
+  width: fill;
+  height: 100%;
+  padding: 5px 15px;
+  width: fit-content;
+  border-top-left-radius: 15px;
+}
 .delete-favs-icon {
-  padding: 5px 0;
   border-top-right-radius: 15px;
   background-color: $color-light-1;
-  padding: 5px 15px;
+  border-left: 5px solid $color-accents;
+  padding: 6px 15px 4px;
 }
 .favorites-list {
   border-top: 1px solid $color-primary;
   max-height: 0;
   opacity: 0.5;
   display: flex;
-  height: fit-content;
+  height: 178px;
   width: 100vw;
   overflow-x: scroll;
   background-color: $color-primary;
-  justify-content: center;
 }
 .js-open-favs {
   max-height: fit-content;
@@ -46,7 +45,7 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  margin: 15px 10px;
+  margin: 8px;
   background-color: $color-white;
   border-radius: 10px;
   opacity: 0.7;
