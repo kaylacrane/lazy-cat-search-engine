@@ -16,6 +16,15 @@ function listenFavoritesClicks() {
     remove.addEventListener('click', updateFavorites);
   });
 }
+/*deletes all favs in list*/
+deleteAllFavs.addEventListener('click', resetFavsList);
+
+function resetFavsList() {
+  favorites = [];
+  updateLocalStorage();
+  loadLocalStorage();
+  showSearchResultFavorites();
+}
 
 // EVENT HANDLERS & FUNCTIONS
 /*Opens/closes favs list upon clicking favs title*/
@@ -64,35 +73,3 @@ function displayFavorites() {
   favoritesListDisplay.innerHTML = codeHTML;
   listenFavoritesClicks();
 }
-
-function updateFavsInSearchResults() {}
-/*locates card associated with clicked item*/
-/*const seriesCards = document.querySelectorAll('.js-series-card');
-let clickedCard;
-seriesCards.forEach((card) => {
-  if (parseInt(card.id) === clickedItemID) {
-    clickedCard = card;
-  }
-});
-favorites.forEach((fav) => {
-  console.log(clickedCard.id, fav.show.id);
-  if (fav.show.id === parseInt(clickedCard.id)) {
-    clickedCard.classList.remove('js-card-favorite');
-  } else {
-   clickedCard.classList.add('js-card-favorite');
-  }
-});
- let clickedCard;
-  seriesCards.forEach((card) => {
-    if (parseInt(card.id) === clickedItemID) {
-      clickedCard = card;
-    }
-  });
-if (favItemIndex >= 0) {
-    favorites.splice(favItemIndex, 1);
-    clickedCard.classList.remove('js-card-favorite');
-  } else if (favItemIndex === -1) {
-    favorites.push(clickedSeries);
-    clickedCard.classList.add('js-card-favorite');
-  }
-*/
