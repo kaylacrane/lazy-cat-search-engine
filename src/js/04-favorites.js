@@ -4,7 +4,7 @@
 favsTitle.addEventListener('click', openCloseFavs);
 
 function listenSeriesClicks() {
-  const addFavorites = document.querySelectorAll('.js-add-favorites');
+  const addFavorites = document.querySelectorAll('.js-series-card-favs');
   addFavorites.forEach((addFav) => {
     addFav.addEventListener('click', updateFavorites);
   });
@@ -17,6 +17,7 @@ function listenFavoritesClicks() {
   });
 }
 /*deletes all favs in list*/
+const deleteAllFavs = document.querySelector('.js-delete-favs-icon');
 deleteAllFavs.addEventListener('click', resetFavsList);
 
 function resetFavsList() {
@@ -32,6 +33,7 @@ function openCloseFavs() {
   favoritesListDisplay.classList.toggle('js-open-favs');
 }
 function updateFavorites(ev) {
+  changeFavButtonSearchResults();
   /*searches within favorites array to see if clicked item already exists or not*/
   const clickedItemID = parseInt(ev.currentTarget.id);
   const clickedSeries = searchResults.find(
@@ -60,7 +62,7 @@ function displayFavorites() {
   for (const item of favorites) {
     codeHTML += `<div class="favorites-item">`;
     codeHTML += `<span class="remove-favorites js-remove-favorites" id="${item.show.id}" title="Remove from favorites list">`;
-    codeHTML += `<i class="fas fa-window-close remove-icon"></i>`;
+    codeHTML += `<i class="fas fa-minus-square remove-icon"></i>`;
     codeHTML += `Remove</span>`;
     codeHTML += `<a href="${item.show.url}" title="Visit ${item.show.name} on TVmaze">`;
     if (item.show.image) {
