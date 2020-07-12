@@ -7,7 +7,6 @@ const searchResultsSection = document.querySelector(
   '.js-search-results-section'
 );
 const favsTitle = document.querySelector('.js-favorites-title');
-const deleteAllFavs = document.querySelector('.js-delete-favs-icon');
 const favoritesListDisplay = document.querySelector('.js-favorites-list');
 const placeholderImg = 'https://dummyimage.com/210x295/ffb6c1/000000.png&text=';
 const placeholderImgFavs =
