@@ -1,4 +1,3 @@
-'use strict';
 // SEARCH EVENT LISTENERS
 searchBox.addEventListener('keyup', getSearchData);
 searchButton.addEventListener('click', initiateServerRequest);

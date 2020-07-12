@@ -1,4 +1,3 @@
-'use strict';
 // TAKES SERVER RESPONSE AND DYNAMICALLY CREATES EACH SERIES CARD
 function displayResults() {
   displayImgNoResults();

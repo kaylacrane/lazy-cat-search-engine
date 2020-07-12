@@ -1,5 +1,3 @@
-'use strict';
-
 // FAVS EVENT LISTENERS
 favsTitle.addEventListener(
   'click',
