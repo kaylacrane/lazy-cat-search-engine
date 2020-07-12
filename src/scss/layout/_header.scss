@@ -6,35 +6,27 @@
   z-index: 10;
 }
 .header__wrapper {
+  margin: auto;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   width: fit-content;
-  @include desktop {
-    text-align: left;
-    flex-direction: row;
-    margin: auto;
-  }
 }
 .header__text-container {
   display: flex;
   flex-direction: column;
-  @include desktop {
-    padding: 20px 35px;
-  }
 }
 .header__logo {
-  padding: 5px;
+  margin-bottom: 20px;
   width: 60px;
   height: 70px;
   display: inline-block;
   animation-name: scaleIn;
   animation-duration: 2s;
-  @include desktop {
-    position: relative;
-    top: -20px;
-    transform: scale(2.2);
+  @include tablet {
+    height: 120px;
+    width: 100px;
   }
 }
 .header__title {
@@ -42,7 +34,7 @@
   font-family: $font-main;
   font-size: 30px;
   margin: 0;
-  @include desktop {
+  @include tablet {
     font-size: 40px;
   }
 }
@@ -51,7 +43,7 @@
   display: block;
   font-family: $font-secondary;
   padding-bottom: 5px;
-  @include desktop {
+  @include tablet {
     font-size: 24px;
     padding-top: 10px;
     text-align: center;

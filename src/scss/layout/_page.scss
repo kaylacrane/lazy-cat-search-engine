@@ -8,11 +8,11 @@ html {
   height: 100vh;
 }
 .page__main {
-  margin-top: 130px;
+  margin-top: 100px;
   height: 100%;
   font-family: $font-main;
-  @include desktop {
-    margin-top: 150px;
+  @include tablet {
+    margin-top: 145px;
   }
 }
 .main__title {
