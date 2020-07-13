@@ -31,15 +31,13 @@
   border-top: 1px solid $color-primary;
   max-height: 0;
   display: flex;
-  height: 178px;
   width: 100vw;
   overflow-x: scroll;
   background-color: $color-primary;
-
   @include desktop {
     margin: auto;
     max-width: 1200px;
-    height: 100%;
+    max-height: 0;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -49,8 +47,6 @@
 }
 .js-open-favs {
   max-height: 100%;
-  opacity: 1;
-  transition: all 0.8s;
 }
 .favorites-item {
   text-align: center;
