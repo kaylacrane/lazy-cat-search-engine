@@ -65,14 +65,20 @@ function displayImgNoResults() {
 }
 /* displays an alert when user searches for dogs or dog*/
 function displayNoDogs() {
-  if (searchValue === 'dog' || searchValue === 'dogs') {
+  if (
+    searchValue.toLowerCase() === 'dog' ||
+    searchValue.toLowerCase() === 'dogs'
+  ) {
     alert('Dogs?! 🙀 Oh the betrayal... ');
   }
 }
 
 /* displays an alert when user searches for cat or cats */
 function displayCats() {
-  if (searchValue === 'cat' || searchValue === 'cats') {
+  if (
+    searchValue.toLowerCase() === 'cat' ||
+    searchValue.toLowerCase() === 'cats'
+  ) {
     alert('I must say, you have amazing taste 🌟😻🌟');
   }
 }
