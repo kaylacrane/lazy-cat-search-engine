@@ -10,6 +10,7 @@
   height: 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
   margin: auto;
   @include tablet {
@@ -18,11 +19,9 @@
   }
 }
 .footer__copy {
-  line-height: 30px;
   font-size: 12px;
   @include tablet {
     font-size: 16px;
-    line-height: 40px;
   }
 }
 .footer__copy-link {

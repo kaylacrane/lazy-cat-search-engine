@@ -63,3 +63,16 @@ function displayImgNoResults() {
     searchResultsSection.classList.remove('js-no-results-img');
   }
 }
+/* displays an alert when user searches for dogs or dog*/
+function displayNoDogs() {
+  if (searchValue === 'dog' || searchValue === 'dogs') {
+    alert('Dogs?! 🙀 Oh the betrayal... ');
+  }
+}
+
+/* displays an alert when user searches for cat or cats */
+function displayCats() {
+  if (searchValue === 'cat' || searchValue === 'cats') {
+    alert('I must say, you have amazing taste 🌟😻🌟');
+  }
+}
