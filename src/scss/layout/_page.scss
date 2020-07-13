@@ -8,11 +8,11 @@ html {
   height: 100vh;
 }
 .page__main {
-  margin-top: 100px;
+  margin-top: 92px;
   height: 100%;
   font-family: $font-main;
   @include tablet {
-    margin-top: 145px;
+    margin-top: 148px;
     padding-bottom: 58px;
   }
 }
@@ -28,7 +28,7 @@ html {
   padding: 5px 0 10px;
   background-color: $color-white;
   @include desktop {
-    margin: 20px auto;
+    margin: 18px auto;
   }
 }
 .search-button {
@@ -94,7 +94,7 @@ html {
 }
 .series-card-favs {
   display: inline-block;
-  padding: 6px 0;
+  padding: 10px 0;
   width: 100%;
   color: $color-accents;
   filter: brightness(80%);
@@ -103,8 +103,8 @@ html {
   color: $color-black;
 }
 .img-container {
-  width: 160px;
-  height: 225px;
+  width: 156px;
+  height: 220px;
   margin: auto;
   @include tablet {
     height: 280px;
