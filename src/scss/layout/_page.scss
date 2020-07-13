@@ -13,6 +13,7 @@ html {
   font-family: $font-main;
   @include tablet {
     margin-top: 145px;
+    padding-bottom: 58px;
   }
 }
 .main__title {
@@ -67,7 +68,7 @@ html {
   background-repeat: no-repeat;
   height: 40vh;
   @include tablet {
-    height: 60vh;
+    height: 50vh;
   }
 }
 .series-card {
