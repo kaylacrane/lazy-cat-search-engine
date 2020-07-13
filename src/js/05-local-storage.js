@@ -16,4 +16,5 @@ function loadLocalStorage() {
     favorites = favsLocalStorage;
   }
   displayFavorites();
+  updateFavsNumber();
 }

@@ -36,6 +36,7 @@ function resetFavsList() {
   updateLocalStorage();
   loadLocalStorage();
   showSearchResultFavorites();
+  updateFavsNumber();
 }
 
 /* dynamically creates and displays favs items */
@@ -83,4 +84,11 @@ function updateFavorites(ev) {
   displayFavorites();
   updateLocalStorage();
   showSearchResultFavorites();
+  updateFavsNumber();
+}
+
+/* updates favorites counter in favs title bar */
+function updateFavsNumber() {
+  const favsNumber = document.querySelector('.js-favs-count');
+  favsNumber.innerHTML = favorites.length;
 }
