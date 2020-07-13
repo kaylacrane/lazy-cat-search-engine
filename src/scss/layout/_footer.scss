@@ -1,0 +1,41 @@
+.page__footer {
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $color-light-2;
+  font-family: $font-secondary;
+}
+.footer__wrapper {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  margin: auto;
+  @include tablet {
+    padding: 10px 50px;
+    height: 55px;
+  }
+}
+.footer__copy {
+  line-height: 30px;
+  font-size: 12px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+.footer__copy-link {
+  color: $color-accents;
+}
+.footer__logo {
+  height: 25px;
+  @include tablet {
+    height: 35px;
+  }
+}
+.footer__wrapper {
+  @include desktop {
+    width: 1200px;
+  }
+}
