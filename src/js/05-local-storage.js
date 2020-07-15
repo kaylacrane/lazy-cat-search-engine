@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 loadLocalStorage();
 
 function updateLocalStorage() {

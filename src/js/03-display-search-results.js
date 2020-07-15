@@ -1,8 +1,11 @@
+/* eslint-disable strict */
+
 // TAKES SERVER RESPONSE AND DYNAMICALLY CREATES EACH SERIES CARD
 function displayResults() {
   let codeHTML = '';
   for (let index = 0; index < searchResults.length; index++) {
-    const { id, name, image, url } = searchResults[index].show;
+    const { id, name, image, url, schedule } = searchResults[index].show;
+    console.log(searchResults[index].show.schedule.days);
     codeHTML += `<article class="series-card js-series-card" id="${id}">`;
     codeHTML += `<span class="series-card-favs js-series-card-favs" id="${id}">`;
     codeHTML += `<i class="fas fa-plus-square"></i>`;
@@ -15,6 +18,12 @@ function displayResults() {
       codeHTML += `<img src="${placeholderImg}${name}" class="series-image js-series-image" alt="Cover image for ${name}" /></a></div>`;
     }
     codeHTML += `<h3 class="series-title js-seriesTitle">${name}</h3>`;
+    if (schedule.days.length === 0) {
+      codeHTML += `<p class="series-schedule-days">Esta serie ya no se emite.</p>`;
+    } else {
+      codeHTML += `<p class="series-schedule-days">${schedule.days} </p>`;
+    }
+
     codeHTML += `</article>`;
   }
   searchResultsSection.innerHTML = codeHTML;
@@ -75,4 +84,13 @@ function displayCats() {
   if (searchValue === 'cat' || searchValue === 'cats') {
     alert('I must say, you have amazing taste 🌟😻🌟');
   }
+}
+
+/* button to log number of results in console*/
+const resultsNumberButton = document.querySelector('.js-number-results-button');
+
+resultsNumberButton.addEventListener('click', showNumberResults);
+
+function showNumberResults() {
+  console.log(`There are ${searchResults.length} series found`);
 }

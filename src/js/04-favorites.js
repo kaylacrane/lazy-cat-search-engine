@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 // FAVS EVENT LISTENERS
 favsTitle.addEventListener(
   'click',

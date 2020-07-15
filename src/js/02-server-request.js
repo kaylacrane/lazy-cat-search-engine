@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 // SEARCH EVENT LISTENERS
 searchBox.addEventListener('keyup', getSearchData);
 searchButton.addEventListener('click', initiateServerRequest);
@@ -13,6 +14,7 @@ function initiateServerRequest(ev) {
     .then((response) => response.json())
     .then((data) => {
       searchResults = data;
+      console.log(data);
       displayCats();
       displayNoDogs();
       displayResults();
