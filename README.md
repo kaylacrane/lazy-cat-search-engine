@@ -28,3 +28,5 @@ To help keep my code (and thoughts, plans...) organized, I created a flowchart:
 ![flowchart](https://github.com/Adalab/modulo-2-evaluacion-final-kaylacrane/blob/master/flowchart-evaluacion-final-modulo-2.png)
 
 I am very happy with how the project turned out, but I'm still very much learning so please let me know how I can improve. Thanks!
+
+![Page screenshot](https://raw.githubusercontent.com/kaylacrane/modulo-2-evaluacion-final-kaylacrane/master/lazy-cat-page.JPG)
